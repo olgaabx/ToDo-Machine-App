@@ -1,19 +1,36 @@
-import './ToDoItem.css'
+import "./ToDoItem.css";
 
 function ToDoItem(props) {
-  return (
-    <li className='ToDoItem'>
-      <span className={`Icon Icon-check ${props.completed && 'Icon-check--active'}`}>
-        ✔
-      </span>
-      <p className={`ToDoItem-p ${props.completed && 'ToDoItem-p-complete'}`}>
-        {props.text}
-      </p>
-      <span className='Icon Icon-delete'>
+	const onComplete = () => {
+		alert("Ya completaste el ToDo " + props.text);
+	};
+	const onDelete = () => {
+		alert("Borraste el ToDo " + props.text);
+	};
+
+	return (
+		<li 
+      className="ToDoItem"
+    >
+			<span
+				className={`Icon Icon-check ${props.completed && "Icon-check--active"}`}
+        onClick={onComplete}
+			>
+				✔
+			</span>
+			<p 
+        className={`ToDoItem-p ${props.completed && "ToDoItem-p-complete"}`}
+      >
+				{props.text}
+			</p>
+			<span 
+        className="Icon Icon-delete"
+        onClick={onDelete}
+      >
         X
       </span>
-    </li>
-  );
-};
+		</li>
+	);
+}
 
 export { ToDoItem };
