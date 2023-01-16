@@ -1,8 +1,9 @@
+import './TodoSearch.css'
 
 function ToDoSearch() {
   return (
-    <input placeholder="Cebolla" />
-  )
+    <input className="ToDoSearch" placeholder="Tomar..." />
+  );
 };
 
 export { ToDoSearch };
