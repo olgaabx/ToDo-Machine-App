@@ -22,7 +22,7 @@ function ToDoItem(props) {
 			</p>
 			<span 
         className="Icon Icon-delete"
-        onClick={onDelete}
+        onClick={props.onDelete}
       >
         X
       </span>

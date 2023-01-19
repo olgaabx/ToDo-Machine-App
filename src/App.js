@@ -47,6 +47,13 @@ function App() {
     newToDos[toDoIndex].completed = true;
     setToDos(newToDos);
   }
+
+  const deleteToDo = (text) => {
+    const todoIndex = toDos.findIndex(toDo => toDo.text === text);
+    const newToDos = [...toDos];
+    newToDos.splice(todoIndex, 1);
+    setToDos(newToDos);
+  };
   
   return (
     <> 
@@ -65,6 +72,7 @@ function App() {
             text={toDo.text}
             completed={toDo.completed}
             onComplete={() => completeToDos(toDo.text)}
+            onDelete={() => deleteToDo(toDo.text)}
           />
         ))}
       </ToDoList>
