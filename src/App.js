@@ -41,10 +41,10 @@ function App() {
     })
   }
 
-  const completeToDos = (text) => {
+  const toggleCompleteToDo = (text) => {
     const toDoIndex = toDos.findIndex(toDo => toDo.text === text);
     const newToDos = [...toDos];
-    newToDos[toDoIndex].completed = true;
+    newToDos[toDoIndex].completed = !newToDos[toDoIndex].completed; //cambia el valor de completed a su negación (true a false o false a true)
     setToDos(newToDos);
   }
 
@@ -71,7 +71,7 @@ function App() {
             key={toDo.text} 
             text={toDo.text}
             completed={toDo.completed}
-            onComplete={() => completeToDos(toDo.text)}
+            onComplete={() => toggleCompleteToDo(toDo.text)}
             onDelete={() => deleteToDo(toDo.text)}
           />
         ))}

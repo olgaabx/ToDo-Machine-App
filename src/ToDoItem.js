@@ -1,9 +1,6 @@
 import "./ToDoItem.css";
 
 function ToDoItem(props) {
-	const onDelete = () => {
-		alert("Borraste el ToDo " + props.text);
-	};
 
 	return (
 		<li 
