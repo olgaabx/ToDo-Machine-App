@@ -1,10 +1,5 @@
-import { ToDoCounter } from "./ToDoCounter";
-import { ToDoSearch } from "./TodoSearch";
-import { ToDoList } from "./ToDoList";
-import { ToDoItem } from "./ToDoItem";
-import { CreateToDoButton } from "./CreateToDoButton";
 import { useState } from "react";
-// import './App.css';
+import { AppUI } from "./AppUI";
 
 const defaultToDos = [
   {
@@ -56,28 +51,15 @@ function App() {
   };
   
   return (
-    <> 
-      <ToDoCounter 
-        total={totalToDos}
-        completed={completedToDos}
-      />
-      <ToDoSearch 
-        searchValue={searchValue}
-        setSearchValue={setSearchValue}
-      />
-      <ToDoList>
-        {searchedToDos.map(toDo => (
-          <ToDoItem 
-            key={toDo.text} 
-            text={toDo.text}
-            completed={toDo.completed}
-            onComplete={() => toggleCompleteToDo(toDo.text)}
-            onDelete={() => deleteToDo(toDo.text)}
-          />
-        ))}
-      </ToDoList>
-      <CreateToDoButton />
-    </>
+    <AppUI 
+      totalToDos={totalToDos}
+      completedToDos={completedToDos}
+      searchValue={searchValue}
+      setSearchValue={setSearchValue}
+      searchedToDos={searchedToDos}
+      toggleCompleteToDo={toggleCompleteToDo}
+      deleteToDo={deleteToDo}
+    />
   );
 }
 
