@@ -16,18 +16,33 @@ import { AppUI } from "./AppUI";
 //   }
 // ]
 
-function App() {
-  const localStorageToDos = localStorage.getItem('TODOS_V1');
-  let parsedToDos;
+function useLocalStorage(itemName, initialValue) {
+  const localStorageItem = localStorage.getItem(itemName);
+  let parsedItem;
 
-  if (!localStorageToDos) {
-    localStorage.setItem('TODOS_V1', JSON.stringify([]));
-    parsedToDos = [];
+  if (!localStorageItem) {
+    localStorage.setItem(itemName, JSON.stringify(initialValue));
+    parsedItem = initialValue;
   } else {
-    parsedToDos = JSON.parse(localStorageToDos);
+    parsedItem = JSON.parse(localStorageItem);
   }
+  const [item, setItem] = useState(parsedItem);
 
-  const [toDos, setToDos] = useState(parsedToDos);
+  //para persistir la información de nuestras funciones en el LS
+  const saveItem = (newItem) => {
+    const stringifiedItem = JSON.stringify(newItem);
+    localStorage.setItem(itemName, stringifiedItem);
+    setItem(newItem);
+  }
+  //retornamos los datos que necesitamos
+  return [
+    item,
+    saveItem,
+  ];
+}
+
+function App() {
+  const [toDos, saveToDos] = useLocalStorage('TODOS_V1', []);
   const [searchValue, setSearchValue] = useState(''); 
 
   const completedToDos = toDos.filter(toDo => !!toDo.completed).length; //filtrando toDos para saber cuáles tienen la propiedad completed como true, para contarlos.
@@ -43,13 +58,6 @@ function App() {
       const searchText = searchValue.toLowerCase();
       return toDoText.includes(searchText);
     })
-  }
-
-  //para persistir la información de nuestras funciones en el LS
-  const saveToDos = (newToDos) => {
-    const stringifiedToDos = JSON.stringify(newToDos);
-    localStorage.setItem('TODOS_V1', stringifiedToDos);
-    setToDos(newToDos);
   }
 
   const toggleCompleteToDo = (text) => {
