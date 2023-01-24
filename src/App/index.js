@@ -1,21 +1,6 @@
 import { useEffect, useState } from "react";
 import { AppUI } from "./AppUI";
 
-// const defaultToDos = [
-//   {
-//     text: 'Tomar las pastillas',
-//     completed: false
-//   },
-//   {
-//     text: 'Tomar agua',
-//     completed: false
-//   },
-//   {
-//     text: 'Estudiar en Platzi',
-//     completed: true
-//   }
-// ]
-
 function useLocalStorage(itemName, initialValue) {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
