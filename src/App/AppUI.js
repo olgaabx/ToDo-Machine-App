@@ -35,7 +35,6 @@ function AppUI() {
 						))}
 					</ToDoList>
 				)}
-				;
 			</ToDoContext.Consumer>
 
 			<CreateToDoButton />
