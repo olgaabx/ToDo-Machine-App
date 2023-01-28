@@ -11,6 +11,7 @@ function ToDoProvider(props) {
 		error,
 	} = useLocalStorage("TODOS_V1", []);
 	const [searchValue, setSearchValue] = useState("");
+	const [openModal, setOpenModal] = useState(false);
 
 	const completedToDos = toDos.filter((toDo) => !!toDo.completed).length; //filtrando toDos para saber cuáles tienen la propiedad completed como true, para contarlos.
 	const totalToDos = toDos.length;
@@ -55,6 +56,8 @@ function ToDoProvider(props) {
 				searchedToDos,
 				toggleCompleteToDo,
 				deleteToDo,
+				openModal,
+				setOpenModal,
 			}}
 		>
 			{props.children}
