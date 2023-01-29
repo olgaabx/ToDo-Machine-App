@@ -1,10 +1,11 @@
 .nav-bar {
   display: flex;
-  padding: 15px 0 10px 20px;
+  padding: 15px;
 }
 .main-title-container {
   display: flex;
-  margin-left: 50px;
+  justify-content: center;
+  margin: 0 auto;
 }
 .main-title-container img {
   width: 30px;
@@ -54,4 +55,17 @@
 }
 .ToDoSearch::placeholder {
   font-family: 'Montserrat';
+}
+
+@media (max-width: 660px) {
+  .nav-bar {
+    display: block;
+  }
+  .main-input-container {
+    width: 75%;
+    margin-top: 15px;
+  }
+  .main-input-container input {
+    width: 85%;
+  }
 }
