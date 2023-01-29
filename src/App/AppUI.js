@@ -21,8 +21,8 @@ function AppUI() {
 
 	return (
 		<>
-			<ToDoCounter />
 			<ToDoSearch />
+			<ToDoCounter />
 			<ToDoList>
 				{error && <p>Desespérate, hubo un error.</p>}
 				{loading && <p>Estamos cargando, no desesperes...</p>}
