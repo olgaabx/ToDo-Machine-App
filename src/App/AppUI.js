@@ -18,7 +18,7 @@ function AppUI() {
 		openModal,
 		setOpenModal,
   } = useContext(ToDoContext);
-  
+
 	return (
 		<>
 			<ToDoCounter />
