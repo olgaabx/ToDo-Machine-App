@@ -1,5 +1,5 @@
 form {
-  width: 90%;
+  width: 85%;
   max-width: 500px;
   background-color: #202124;;
   padding: 33px 40px;
@@ -65,7 +65,3 @@ textarea:focus {
   background: #61DAFA;
   box-shadow: 0px 5px 25px rgba(97, 218, 250, 0.5);
 }
-/* 
-.TodoForm-button--cancel {
-  background: transparent;
-} */
