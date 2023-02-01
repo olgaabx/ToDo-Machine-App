@@ -20,8 +20,8 @@ function ToDoSearch() {
           <img src='https://cdn-icons-png.flaticon.com/512/465/465267.png' alt=''></img>
           <h1>Your things to do</h1>
         </div>
-        <div class="main-input-container">
-          <span class="search-icon"></span>
+        <div className="main-input-container">
+          <span className="search-icon"></span>
           <input 
           className="ToDoSearch" 
           placeholder='search your to-dos...'

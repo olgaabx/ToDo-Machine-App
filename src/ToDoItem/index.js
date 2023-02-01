@@ -1,6 +1,7 @@
 import "./ToDoItem.css";
 
 function ToDoItem(props) {
+	const deleteIcon = 'https://cdn-icons-png.flaticon.com/512/1828/1828843.png'
 
 	return (
 		<li 
@@ -21,7 +22,10 @@ function ToDoItem(props) {
         className="Icon Icon-delete"
         onClick={props.onDelete}
       >
-        X
+        <img 
+					src={deleteIcon} 
+					alt=""
+				></img>
       </span>
 		</li>
 	);

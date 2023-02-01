@@ -1,5 +1,5 @@
 .CreateToDoButton {
-  background-color: #525355;
+  background-color: #07f31fde;
   box-shadow: 0px 5px 25px rgb(177, 176, 176);
   border: 1px solid #5f6368;
   border-radius: 30%;
@@ -9,7 +9,7 @@
   bottom: 50px;
   right: 50px;
   font-weight: bold;
-  color: #FAFAFA;
+  color: #fafafa;
   display: flex;
   justify-content: center;
   align-items: center;

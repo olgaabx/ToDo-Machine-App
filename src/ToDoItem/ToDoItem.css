@@ -32,7 +32,6 @@
   width: 48px;
   font-size: 24px;
   font-weight: bold;
-  /* background-color: #CCC; */
 }
 
 .Icon-check {
@@ -50,6 +49,10 @@
 }
 .Icon-delete:hover {
   color: red;
+}
+.Icon-delete img {
+  height: 35px;
+  width: 35px;
 }
 
 @media (max-width: 660px) {
