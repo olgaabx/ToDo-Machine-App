@@ -19,7 +19,7 @@ function AppUI() {
 		toggleCompleteToDo,
 		deleteToDo,
 		openModal,
-		setOpenModal,
+		setOpenModal
   } = useContext(ToDoContext);
 
 	return (
