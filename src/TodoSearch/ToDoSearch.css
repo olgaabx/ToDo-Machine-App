@@ -1,11 +1,11 @@
 .nav-bar {
-  display: flex;
   padding: 15px;
 }
 .main-title-container {
   display: flex;
   justify-content: center;
   margin: 0 auto;
+  margin-bottom: 15px;
 }
 .main-title-container img {
   width: 30px;

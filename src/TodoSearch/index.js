@@ -24,6 +24,7 @@ function ToDoSearch() {
           <span class="search-icon"></span>
           <input 
           className="ToDoSearch" 
+          placeholder='search your to-dos...'
           value={searchValue}
           onChange={onSearchValueChange}
           />

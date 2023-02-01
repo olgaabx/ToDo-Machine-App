@@ -28,11 +28,11 @@ function ToDoForm() {
     <form
       onSubmit={onSubmit}
     >
-      <label>Write your ToDo</label>
+      <label>Write your To-Do</label>
       <textarea
         value={newToDoValue}
         onChange={onChangeText}
-        placeholder="Write your ToDo here"
+        placeholder="Buy oni..."
       />
       <div className="TodoForm-buttonContainer">
         <button
