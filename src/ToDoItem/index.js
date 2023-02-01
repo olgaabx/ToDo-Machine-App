@@ -14,7 +14,7 @@ function ToDoItem(props) {
 				✔
 			</span>
 			<p 
-        className={`ToDoItem-p ${props.completed && "ToDoItem-p-complete"}`}
+        className={`ToDoItem-p ${props.completed && "ToDoItem-p--complete"}`}
       >
 				{props.text}
 			</p>
